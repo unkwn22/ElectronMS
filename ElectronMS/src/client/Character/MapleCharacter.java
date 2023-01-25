@@ -9826,7 +9826,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
         int sid = -1;
         final String sname = SkillFactory.getSkillName(paramInt);
         MapleData data;
-        MapleDataProvider dataProvider = MapleDataProviderFactory.getDataProvider(new File("wz/String.wz"));
+        MapleDataProvider dataProvider = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz"));
         data = dataProvider.getData("Skill.img");
         List<Pair<Integer, String>> skillPairList = new LinkedList<>();
         for (MapleData skillIdData : data.getChildren()) {

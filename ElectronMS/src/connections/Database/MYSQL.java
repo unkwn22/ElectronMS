@@ -32,7 +32,7 @@ public class MYSQL {
 			// added
 			String jdbcUrl = "jdbc:mariadb://localhost:3306/kms_316?autoReconnect=true&characterEncoding=euckr&maxReconnects=100&CgonnectionTimeout=30000";
 			String username = "root";
-			String password = "";
+			String password = "root";
 
 			// ConnectionFactory produce
 			ConnectionFactory connFactory = new DriverManagerConnectionFactory(jdbcUrl, username, password);

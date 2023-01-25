@@ -46,7 +46,7 @@ public class LoggerChatting {
     public static void writeLog(String log, String text) {
         try {
             Calendar currentTime = Calendar.getInstance(TimeZone.getTimeZone("KST"), Locale.KOREAN);
-            File file = new File("property/Logs/" + log);
+            File file = new File("ElectronMS/property/Logs/" + log);
             if (!file.exists()) {
                 boolean success = file.createNewFile();
                 if (!success) {

@@ -3941,7 +3941,7 @@ public class PlayerHandler {
             final String sname = SkillFactory.getSkillName(sid);
             final int cid = rp.readInt();
             MapleData data;
-            MapleDataProvider dataProvider = MapleDataProviderFactory.getDataProvider(new File("wz/String.wz"));
+            MapleDataProvider dataProvider = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz"));
             data = dataProvider.getData("Skill.img");
             List<Pair<Integer, String>> skillPairList = new LinkedList<Pair<Integer, String>>();
             for (MapleData skillIdData : data.getChildren()) {

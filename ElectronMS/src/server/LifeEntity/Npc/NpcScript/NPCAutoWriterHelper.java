@@ -36,19 +36,19 @@ public class NPCAutoWriterHelper {
     }
 
     public static String getNPCName(int id) {
-        return MapleDataTool.getString(id + "/name", MapleDataProviderFactory.getDataProvider(new File("wz/String.wz")).getData("Npc.img"), "MISSINGNO");
+        return MapleDataTool.getString(id + "/name", MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz")).getData("Npc.img"), "MISSINGNO");
     }
 
     public static String getNPCFunc(int id) {
-        return MapleDataTool.getString(id + "/func", MapleDataProviderFactory.getDataProvider(new File("wz/String.wz")).getData("Npc.img"), "MISSINGNO");
+        return MapleDataTool.getString(id + "/func", MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz")).getData("Npc.img"), "MISSINGNO");
     }
 
     public final String getNpcName() {
-        return MapleDataTool.getString(npcID + "/name", MapleDataProviderFactory.getDataProvider(new File("wz/String.wz")).getData("Npc.img"), "MISSINGNO");
+        return MapleDataTool.getString(npcID + "/name", MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz")).getData("Npc.img"), "MISSINGNO");
     }
 
     public final String getNpcFunc() {
-        return MapleDataTool.getString(npcID + "/func", MapleDataProviderFactory.getDataProvider(new File("wz/String.wz")).getData("Npc.img"), "MISSINGNO");
+        return MapleDataTool.getString(npcID + "/func", MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz")).getData("Npc.img"), "MISSINGNO");
     }
 
     public final String addInfo(int id) {
@@ -59,7 +59,7 @@ public class NPCAutoWriterHelper {
             a.append("Npc Description : ").append(getNPCFunc(id)).append("\r\n");
         }
         a.append("\r\n#k");
-        for (MapleData d : MapleDataProviderFactory.getDataProvider(new File("wz/String.wz")).getData("Npc.img").getChildByPath(id + "").getChildren()) {
+        for (MapleData d : MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz")).getData("Npc.img").getChildByPath(id + "").getChildren()) {
             if (!d.getName().equals("name") && !d.getName().equals("func")) {
                 a.append(d.getName()).append(" : ").append((String) d.getData()).append("\r\n");
             }

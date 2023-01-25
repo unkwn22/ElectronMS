@@ -18,7 +18,7 @@ public class RewardScroll {
 
     protected RewardScroll() {
         try {
-            FileReader fl = new FileReader("property/RewardScroll.properties");
+            FileReader fl = new FileReader("ElectronMS/property/RewardScroll.properties");
             BufferedReader br = new BufferedReader(fl);
             String[] readSplit;
             String readLine;

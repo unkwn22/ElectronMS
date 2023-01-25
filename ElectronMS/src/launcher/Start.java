@@ -160,7 +160,7 @@ public class Start {
 		
         BufferedReader br;
         System.out.println("Buffering");
-        try (FileReader fl = new FileReader("wz/Etc.wz/MakeCharInfo.img.xml")) {
+        try (FileReader fl = new FileReader("ElectronMS/wz/Etc.wz/MakeCharInfo.img.xml")) {
             br = new BufferedReader(fl);
             String readLine;
             while ((readLine = br.readLine()) != null) {
@@ -284,8 +284,8 @@ public class Start {
     /* Loads Hair & Face WZ */
     public static void loadHair_Face() {
         System.out.println("Loading Character.wz/Hair & Character.wz/Face");
-        File Hair = new File("wz/Character.wz/Hair");
-        File Face = new File("wz/Character.wz/Face");
+        File Hair = new File("ElectronMS/wz/Character.wz/Hair");
+        File Face = new File("ElectronMS/wz/Character.wz/Face");
         for (File file : Objects.requireNonNull(Hair.listFiles())) {
             ServerConstants.real_face_hair += file.getName();
         }

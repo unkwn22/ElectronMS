@@ -1,7 +1,6 @@
 package constants;
 
 import java.io.FileInputStream;
-import java.io.UnsupportedEncodingException;
 import java.net.InetAddress;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -154,12 +153,12 @@ public class ServerConstants {
     
     static {
         try {
-            FileInputStream setting = new FileInputStream("property/ServerSettings.properties");
+            FileInputStream setting = new FileInputStream("ElectronMS/property/ServerSettings.properties");
             Properties setting_ = new Properties();
             setting_.load(setting);
             setting.close();
-            defaultFlag = Byte.parseByte(setting_.getProperty(toUni("Flag")));
-            String[] temp = setting_.getProperty(toUni("커스텀퀘스트")).split(",");
+            defaultFlag = Byte.parseByte(setting_.getProperty("Flag"));
+            String[] temp = setting_.getProperty("커스텀퀘스트").split(",");
             for (String v1 : temp) {
                 GameConstants.questReader.add(Integer.parseInt(v1));
             }
@@ -177,25 +176,25 @@ public class ServerConstants {
 
             cshopNpc = Integer.parseInt(setting_.getProperty("CSNpc"));
 
-            serverName = new String(setting_.getProperty(toUni("서버이름")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            serverMessage = new String(setting_.getProperty(toUni("서버메세지")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            serverWelcome = new String(setting_.getProperty(toUni("서버환영메세지")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            eventMessage = new String(setting_.getProperty(toUni("이벤트메세지")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            beginner = new String(setting_.getProperty(toUni("처음시작공지")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            serverNotititle = new String(setting_.getProperty(toUni("서버공지제목")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            serverNotification = new String(setting_.getProperty(toUni("서버공지내용")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            recommendMessage = new String(setting_.getProperty(toUni("추천메세지")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            serverHint = new String(setting_.getProperty(toUni("서버힌트")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
+            serverName = setting_.getProperty("서버이름");
+            serverMessage = setting_.getProperty("서버메세지");
+            serverWelcome = setting_.getProperty("서버환영메세지");
+            eventMessage = setting_.getProperty("이벤트메세지");
+            beginner = setting_.getProperty("처음시작공지");
+            serverNotititle = setting_.getProperty("서버공지제목");
+            serverNotification = setting_.getProperty("서버공지내용");
+            recommendMessage = setting_.getProperty("추천메세지");
+            serverHint = setting_.getProperty("서버힌트");
 
-            dbHost = new String(setting_.getProperty(toUni("Arc.dbHost")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            dbPort = Integer.parseInt(setting_.getProperty(toUni("Arc.dbPort")));
-            dbUser = new String(setting_.getProperty(toUni("Arc.dbUser")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
-            dbPassword = new String(setting_.getProperty(toUni("Arc.dbPassword")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
+            dbHost = setting_.getProperty("Arc.dbHost");
+            dbPort = Integer.parseInt(setting_.getProperty(("Arc.dbPort")));
+            dbUser = setting_.getProperty("Arc.dbUser");
+            dbPassword = setting_.getProperty("Arc.dbPassword");
 
             events = setting_.getProperty("Events");
 
             startMap = Integer.parseInt(setting_.getProperty("StartMap"));
-            serverHint = new String(setting_.getProperty(toUni("서버힌트")).getBytes(StandardCharsets.ISO_8859_1), "euc-kr");
+            serverHint = setting_.getProperty("서버힌트");
 
             MAPLE_VERSION = Short.parseShort(setting_.getProperty("GameVersion"));
             subVersion = Byte.parseByte(setting_.getProperty("GameSubVersion"));
@@ -203,10 +202,10 @@ public class ServerConstants {
             path = setting_.getProperty("Path");
             windowsDumpPath = setting_.getProperty("WindowsDumpPath");
 
-            serverCheck = Boolean.parseBoolean(setting_.getProperty(toUni("서버점검")));
-            showPackets = Boolean.parseBoolean(setting_.getProperty(toUni("패킷출력")));
-            useMaxDrop = Boolean.parseBoolean(setting_.getProperty(toUni("최대드랍사용")));
-            useBossMaxDrop = Boolean.parseBoolean(setting_.getProperty(toUni("최대보스드랍사용")));
+            serverCheck = Boolean.parseBoolean(setting_.getProperty(("서버점검")));
+            showPackets = Boolean.parseBoolean(setting_.getProperty(("패킷출력")));
+            useMaxDrop = Boolean.parseBoolean(setting_.getProperty(("최대드랍사용")));
+            useBossMaxDrop = Boolean.parseBoolean(setting_.getProperty(("최대보스드랍사용")));
             bossMaxDrop = Integer.parseInt(setting_.getProperty("BossMaxDrop"));
             maxDrop = Integer.parseInt(setting_.getProperty("MaxDrop"));
 
@@ -276,10 +275,6 @@ public class ServerConstants {
     }
 
     public static int basePorts = (isLocal ? 100 : 0) + (ChannelPort);
-
-    protected static String toUni(String kor) throws UnsupportedEncodingException {
-        return new String(kor.getBytes("KSC5601"), "8859_1");
-    }
 
     public static boolean isAdminIp(String ip) {
         ip = ip.replaceAll("/", "");

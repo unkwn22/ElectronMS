@@ -61,7 +61,7 @@ public class CheckItemExist {
     private static void checkItem(int itemid, int type) { // Item, shop, price
         boolean isExist = false;
         if (type == 1) {
-            File source = new File("wz/Character.wz");
+            File source = new File("ElectronMS/wz/Character.wz");
             List<Triple<Integer, Integer, Integer>> list = new ArrayList<Triple<Integer, Integer, Integer>>();
             String[] category = {"Accessory", "Cap", "Cape", "Coat", "Glove", "Longcoat", "Pants", "Shield", "Shoes",
                 "Weapon"};
@@ -73,7 +73,7 @@ public class CheckItemExist {
             }
         } else if (type == 2 || type == 3 || type == 4) {
             try {
-                File source = new File("wz/Item.wz");
+                File source = new File("ElectronMS/wz/Item.wz");
                 MapleDataProvider sourceData;
                 List<Triple<Integer, Integer, Integer>> list = new ArrayList<Triple<Integer, Integer, Integer>>();
                 String[] category = {"", "", "Consume", "Install", "Etc", "Cash", "Pet", "Special"};

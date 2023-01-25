@@ -16,7 +16,7 @@ public class ReadBin {
 
     public ReadBin(String file) {
         try {
-            this.fis = new FileInputStream("resources/bin/" + file);
+            this.fis = new FileInputStream("ElectronMS/resources/bin/" + file);
         } catch (FileNotFoundException e) {
             throw new UnsupportedOperationException("Bin loading failed! The file '" + file + "' could not be found.");
         }

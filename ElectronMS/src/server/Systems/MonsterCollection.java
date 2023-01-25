@@ -15,7 +15,7 @@ import server.Systems.MonsterCollectionRegion.CollectionField.CollectionGroup.Co
 
 public class MonsterCollection {
 
-    private static final MapleDataProvider etcDataWZ = MapleDataProviderFactory.getDataProvider(new File("wz/Etc.wz"));
+    private static final MapleDataProvider etcDataWZ = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Etc.wz"));
     private static final MapleData mobCollectionData = etcDataWZ.getData("mobCollection.img");
     private static MonsterCollection _instance = new MonsterCollection();
 

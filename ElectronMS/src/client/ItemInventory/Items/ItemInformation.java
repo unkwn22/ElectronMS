@@ -31,10 +31,10 @@ import tools.RandomStream.Randomizer;
 public class ItemInformation {
 
     private final static ItemInformation instance = new ItemInformation();
-    public final MapleDataProvider etcData = MapleDataProviderFactory.getDataProvider(new File("wz/Etc.wz"));
-    public final MapleDataProvider itemData = MapleDataProviderFactory.getDataProvider(new File("wz/Item.wz"));
-    protected final MapleDataProvider equipData = MapleDataProviderFactory.getDataProvider(new File("wz/Character.wz"));
-    protected final MapleDataProvider stringData = MapleDataProviderFactory.getDataProvider(new File("wz/String.wz"));
+    public final MapleDataProvider etcData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Etc.wz"));
+    public final MapleDataProvider itemData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Item.wz"));
+    protected final MapleDataProvider equipData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Character.wz"));
+    protected final MapleDataProvider stringData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz"));
     protected final MapleData cashStringData = stringData.getData("Cash.img");
     protected final MapleData consumeStringData = stringData.getData("Consume.img");
     protected final MapleData eqpStringData = stringData.getData("Eqp.img");

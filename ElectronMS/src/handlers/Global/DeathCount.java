@@ -32,7 +32,7 @@ public class DeathCount {
 
     public static void load() {
         try {
-            FileInputStream setting = new FileInputStream("property/DeathCount.properties");
+            FileInputStream setting = new FileInputStream("ElectronMS/property/DeathCount.properties");
             Properties setting_ = new Properties();
             setting_.load(setting);
             setting.close();

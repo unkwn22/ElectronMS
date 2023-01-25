@@ -22,7 +22,7 @@ public class MapleLoginHelper {
     }
 
     protected MapleLoginHelper() {
-        final MapleDataProvider prov = MapleDataProviderFactory.getDataProvider(new File("wz/Etc.wz"));
+        final MapleDataProvider prov = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Etc.wz"));
         final MapleData informationData = prov.getData("MakeCharInfo.img");
         for (final MapleData data : informationData.getChildren()) {
             for (final MapleData subdata : data.getChildren()) {

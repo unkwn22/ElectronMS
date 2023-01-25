@@ -38,7 +38,7 @@ public class EventScriptManager extends AbstractScriptManager {
     
     public EventScriptManager(final ChannelServer cserv, final String[] scripts) {
         super();
-        for (File f : Objects.requireNonNull(new File("scripts/event").listFiles())) {
+        for (File f : Objects.requireNonNull(new File("ElectronMS/scripts/event").listFiles())) {
             String script = f.getName().replace(".js", "");
             final Invocable iv = getInvocable("event/" + f.getName(), null);
             if (iv != null) {

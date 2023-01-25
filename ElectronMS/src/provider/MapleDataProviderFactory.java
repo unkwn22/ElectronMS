@@ -6,7 +6,7 @@ import provider.WzXML.XMLWZFile;
 
 public class MapleDataProviderFactory {
 
-    private final static String wzPath = "WZ/";
+    private final static String wzPath = "ElectronMS/wz/";
 
     private static MapleDataProvider getWZ(Object in, boolean provideImages) {
         if (in instanceof File) {

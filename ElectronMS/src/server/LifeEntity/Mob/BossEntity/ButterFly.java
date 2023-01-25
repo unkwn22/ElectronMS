@@ -18,7 +18,7 @@ public class ButterFly {
         BUTTERFLY_POS1 = new ArrayList<>();
         BUTTERFLY_POS2 = new ArrayList<>();
         try {
-            MapleData butterflyData = MapleDataProviderFactory.getDataProvider(new File("Wz/Etc.wz"))
+            MapleData butterflyData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Etc.wz"))
                     .getData("BossLucid.img").getChildByPath("Butterfly");
             for (MapleData d : butterflyData.getChildByPath("phase1_pos")) {
                 BUTTERFLY_POS1.add(MapleDataTool.getPoint("pos", d));

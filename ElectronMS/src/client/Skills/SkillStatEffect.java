@@ -3118,7 +3118,7 @@ public class SkillStatEffect {
             applyto.getStat().addSaintSaver(-applyto.getStat().getSaintSaver());
         } else if (isSoulSkill()) {
             Equip weapon = (Equip) (applyto.getInventory(MapleInventoryType.EQUIPPED).getItem((short) -11));
-            File source = new File("wz/Skill.wz");
+            File source = new File("ElectronMS/wz/Skill.wz");
             MapleDataProvider sourceData;
             sourceData = MapleDataProviderFactory.getDataProvider(source);
             MapleData dd = sourceData.getData(String.valueOf(sourceid).substring(0, 5) + ".img");

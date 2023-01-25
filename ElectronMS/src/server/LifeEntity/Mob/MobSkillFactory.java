@@ -16,7 +16,7 @@ import tools.Pair;
 public class MobSkillFactory {
 
     private static Map<Pair<Integer, Integer>, MobSkill> mobSkills = new HashMap<>();
-    private static MapleDataProvider dataSource = MapleDataProviderFactory.getDataProvider(new File("wz/Skill.wz/MobSkill"));
+    private static MapleDataProvider dataSource = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Skill.wz/MobSkill"));
 
     public static MobSkill getMobSkill(int skillId, int level) {
         MobSkill ret = mobSkills.get(new Pair<>(skillId, level));

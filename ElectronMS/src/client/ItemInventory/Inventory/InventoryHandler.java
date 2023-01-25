@@ -4111,7 +4111,7 @@ public class InventoryHandler {
         int soulid = soul.getItemId();
         boolean great = false;
         MapleDataProvider sourceData;
-        sourceData = MapleDataProviderFactory.getDataProvider(new File("wz/Item.wz"));
+        sourceData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Item.wz"));
         MapleData dd = sourceData.getData("SkillOption.img");
         int skillid = MapleDataTool.getIntConvert(dd.getChildByPath("skill/" + soula + "/skillId"));
         if (slot == (short) -11) {

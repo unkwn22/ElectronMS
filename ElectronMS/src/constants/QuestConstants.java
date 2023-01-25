@@ -14,7 +14,7 @@ public class QuestConstants {
     public static List<Integer> blockQuest = new ArrayList<>();
 
     static {
-        for (File f : Objects.requireNonNull(new File("resources\\bin\\Quest.wz\\Check_sub").listFiles())) {
+        for (File f : Objects.requireNonNull(new File("ElectronMS/resources/bin/Quest.wz/Check_sub").listFiles())) {
             try {
                 FileInputStream setting = new FileInputStream(f);
                 int qid = Integer.parseInt(f.getName().replaceAll(".info", ""));

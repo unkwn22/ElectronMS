@@ -12,10 +12,10 @@ public class CommodityIndex {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         FileReader fr;
         String text_ = "";
-        fr = new FileReader("wz/Etc.wz/Commodity.img.xml");
+        fr = new FileReader("ElectronMS/wz/Etc.wz/Commodity.img.xml");
         BufferedReader buffer = new BufferedReader(fr);
         int i = 0;
-        FileOutputStream fos = new FileOutputStream(new File("wz/Commodity_.img.xml"), false);
+        FileOutputStream fos = new FileOutputStream(new File("ElectronMS/wz/Commodity_.img.xml"), false);
         while (text_ != null) {
             text_ = buffer.readLine();
             if (text_ != null) {

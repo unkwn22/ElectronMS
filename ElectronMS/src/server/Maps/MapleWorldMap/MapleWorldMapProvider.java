@@ -38,8 +38,8 @@ import tools.StringUtil;
 
 public class MapleWorldMapProvider {
 
-    private static final MapleDataProvider source = MapleDataProviderFactory.getDataProvider(new File("wz/Map.wz"));
-    private static final MapleData nameData = MapleDataProviderFactory.getDataProvider(new File("wz/String.wz")).getData("Map.img");
+    private static final MapleDataProvider source = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Map.wz"));
+    private static final MapleData nameData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz")).getData("Map.img");
     private final Map<Integer, MapleMap> maps = new HashMap<>();
     private final HashMap<Integer, MapleMap> instanceMap = new HashMap<>();
     private int channel;

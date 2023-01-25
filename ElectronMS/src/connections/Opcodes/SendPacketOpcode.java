@@ -366,7 +366,7 @@ public enum SendPacketOpcode {
 
     public static void loadOpcode() {
         try {
-            IniFileProcess storage = new IniFileProcess(new File("property/Packet/SendPacket.ini"));
+            IniFileProcess storage = new IniFileProcess(new File("ElectronMS/property/Packet/SendPacket.ini"));
             for (SendPacketOpcode packet : SendPacketOpcode.values()) {
                 if (packet.exist) {
                     continue;

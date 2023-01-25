@@ -218,7 +218,7 @@ public class VCoreFactory {
     }
 
     public static void LoadCore() {
-        final MapleDataProvider prov = MapleDataProviderFactory.getDataProvider(new File("Wz/Etc.wz"));
+        final MapleDataProvider prov = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Etc.wz"));
         MapleData nameData = prov.getData("VCore.img");
         try {
             for (MapleData dat : nameData) {
@@ -254,7 +254,7 @@ public class VCoreFactory {
     }
 
     public static void loadCoreEnforcementData() {
-        MapleData CoreData = MapleDataProviderFactory.getDataProvider(new File("wz/Etc.wz")).getData("VCore.img")
+        MapleData CoreData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Etc.wz")).getData("VCore.img")
                 .getChildByPath("Enforcement");
         for (MapleData data : CoreData.getChildByPath("Skill")) {
             coreSkillEData.put(Integer.parseInt(data.getName()),

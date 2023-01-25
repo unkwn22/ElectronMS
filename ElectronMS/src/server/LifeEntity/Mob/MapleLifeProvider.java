@@ -34,10 +34,10 @@ import tools.StringUtil;
 
 public class MapleLifeProvider {
 
-    private static final MapleDataProvider data = MapleDataProviderFactory.getDataProvider(new File("wz/Mob.wz"));
+    private static final MapleDataProvider data = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Mob.wz"));
     private static final MapleDataProvider stringDataWZ = MapleDataProviderFactory
-            .getDataProvider(new File("wz/String.wz"));
-    private static final MapleDataProvider etcDataWZ = MapleDataProviderFactory.getDataProvider(new File("wz/Etc.wz"));
+            .getDataProvider(new File("ElectronMS/wz/String.wz"));
+    private static final MapleDataProvider etcDataWZ = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Etc.wz"));
     private static final MapleData mobStringData = stringDataWZ.getData("Mob.img");
     private static final MapleData npcStringData = stringDataWZ.getData("Npc.img");
     private static final MapleData npclocData = etcDataWZ.getData("NpcLocation.img");

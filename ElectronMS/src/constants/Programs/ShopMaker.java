@@ -191,7 +191,7 @@ public class ShopMaker {
     }
 
     private static List<Triple<Integer, Integer, Integer>> getAllItems() { // Item, shop, price
-        File source = new File("wz/Character.wz");
+        File source = new File("ElectronMS/wz/Character.wz");
         MapleDataProvider sourceData;// = MapleDataProviderFactory.getDataProvider(source);
         List<Triple<Integer, Integer, Integer>> list = new ArrayList<Triple<Integer, Integer, Integer>>();
         String[] category = {"Accessory", "Cap", "Cape", "Coat", "Glove", "Longcoat", "Pants", "Shield", "Shoes",

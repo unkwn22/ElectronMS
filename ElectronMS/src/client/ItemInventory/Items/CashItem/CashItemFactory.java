@@ -24,8 +24,8 @@ public class CashItemFactory {
 
     private static final CashItemFactory instance = new CashItemFactory();
     public Map<Integer, CashItemInfo> itemStats = new HashMap<>();
-    public MapleDataProvider petData = MapleDataProviderFactory.getDataProvider(new File("wz/Item.wz/Pet"));
-    public MapleDataProvider data = MapleDataProviderFactory.getDataProvider(new File("wz/Etc.wz"));
+    public MapleDataProvider petData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Item.wz/Pet"));
+    public MapleDataProvider data = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/Etc.wz"));
 
     public static CashItemFactory getInstance() {
         return instance;

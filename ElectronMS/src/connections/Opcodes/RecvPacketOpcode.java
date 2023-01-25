@@ -340,7 +340,7 @@ public enum RecvPacketOpcode {
 
     public static void loadOpcode() {
         try {
-            IniFileProcess storage = new IniFileProcess(new File("property/Packet/RecvPacket.ini"));
+            IniFileProcess storage = new IniFileProcess(new File("ElectronMS/property/Packet/RecvPacket.ini"));
             for (RecvPacketOpcode packet : RecvPacketOpcode.values()) {
                 if (packet.exist && packet.name() != "SymbolExp") {
                     continue;

@@ -1064,7 +1064,7 @@ public class AdminCommands {
 			String type = splitted[1];
 			String search = StringUtil.joinStringFrom(splitted, 2);
 			MapleData data = null;
-			MapleDataProvider dataProvider = MapleDataProviderFactory.getDataProvider(new File("wz/String.wz"));
+			MapleDataProvider dataProvider = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz"));
 			c.dropMessage(6, "<<type: " + type + " | search word: " + search + ">>");
 
 			if (type.equalsIgnoreCase("Npc")) {

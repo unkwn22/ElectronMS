@@ -239,7 +239,7 @@ class LoadSkillDataThread extends Thread {
     }
 
     public static void cacheSkillData() {
-        final MapleData stringData = MapleDataProviderFactory.getDataProvider(new File("WZ/String.wz"))
+        final MapleData stringData = MapleDataProviderFactory.getDataProvider(new File("ElectronMS/wz/String.wz"))
                 .getData("Skill.img");
         final MapleDataProvider datasource = MapleDataProviderFactory
                 .getDataProvider(MapleDataProviderFactory.fileInWZPath("Skill.wz"));
