@@ -335,11 +335,11 @@ public class NPCScriptManager extends AbstractScriptManager {
         if (npccm != null) {
             cms.remove(c);
             if (npccm.getType() == -1) {
-                c.removeScriptEngine("scripts/npc/" + npccm.getNpc() + ".js");
-                c.removeScriptEngine("scripts/npc/" + npccm.getScript() + ".js");
-                c.removeScriptEngine("scripts/npc/notcoded.js");
+                c.removeScriptEngine("ElectronMS/scripts/npc/" + npccm.getNpc() + ".js");
+                c.removeScriptEngine("ElectronMS/scripts/npc/" + npccm.getScript() + ".js");
+                c.removeScriptEngine("ElectronMS/scripts/npc/notcoded.js");
             } else {
-                c.removeScriptEngine("scripts/quest/" + npccm.getQuest() + ".js");
+                c.removeScriptEngine("ElectronMS/scripts/quest/" + npccm.getQuest() + ".js");
             }
         }
         if (c.getPlayer() != null && c.getPlayer().getConversation() == 1) {

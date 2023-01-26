@@ -24,7 +24,7 @@ public class NPCAutoWriterHelper {
 
     public final boolean checkFileExist() {
         try {
-            if (new File("scripts/npc/" + npcID + ".js").exists()) { // If a script already exists
+            if (new File("ElectronMS/scripts/npc/" + npcID + ".js").exists()) { // If a script already exists
                 return true;
             }
         } catch (Exception e) {
@@ -72,7 +72,7 @@ public class NPCAutoWriterHelper {
             if (checkFileExist()) { // If a script already exists
                 return;
             }
-            out = new FileOutputStream("scripts/npc/" + npcID + ".js");
+            out = new FileOutputStream("ElectronMS/scripts/npc/" + npcID + ".js");
         } catch (FileNotFoundException fe) {
             dropMessage("Failed to create file Check if the server program has permission to write files.");
             if (!ServerConstants.realese) {

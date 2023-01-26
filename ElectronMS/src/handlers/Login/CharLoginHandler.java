@@ -20,7 +20,6 @@ import client.ItemInventory.Inventory.MapleInventory;
 import client.ItemInventory.Inventory.MapleInventoryType;
 import client.ItemInventory.ItemPotential.MapleItempotMain;
 import client.Skills.SkillFactory;
-import com.sun.security.ntlm.Server;
 import constants.GameConstants;
 import constants.ServerConstants;
 import connections.Database.MYSQL;

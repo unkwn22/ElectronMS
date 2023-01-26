@@ -525,7 +525,7 @@ public class NPCHandler {
         ScriptEngineManager sem = new ScriptEngineManager();
         FileReader fr = null;
         try {
-            path = "scripts/" + path;
+            path = "ElectronMS/scripts/" + path;
             ScriptEngine engine = null;
 
             if (c != null) {

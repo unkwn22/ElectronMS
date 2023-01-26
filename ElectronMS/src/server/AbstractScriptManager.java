@@ -27,7 +27,7 @@ public abstract class AbstractScriptManager {
 
     protected Invocable getInvocable(String path, MapleClient c, boolean npc) {
 
-        path = "scripts/" + path;
+        path = "ElectronMS/scripts/" + path;
 
         ScriptEngine engine = null;
 

@@ -35,7 +35,7 @@ public class PortalScriptManager {
             return scripts.get(scriptName);
         }
 
-        final File scriptFile = new File("Scripts/portal/" + scriptName + ".js");
+        final File scriptFile = new File("ElectronMS/scripts/portal/" + scriptName + ".js");
         if (!scriptFile.exists()) {
             scripts.put(scriptName, null);
             return null;

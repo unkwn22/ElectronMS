@@ -40,7 +40,7 @@ public class EventScriptManager extends AbstractScriptManager {
         super();
         for (File f : Objects.requireNonNull(new File("ElectronMS/scripts/event").listFiles())) {
             String script = f.getName().replace(".js", "");
-            final Invocable iv = getInvocable("event/" + f.getName(), null);
+            final Invocable iv = getInvocable("ElectronMS/scripts/event/" + f.getName(), null);
             if (iv != null) {
                 events.put(script, new EventEntry(script, iv, new EventManager(cserv, iv, script)));
             }
